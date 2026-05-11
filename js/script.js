@@ -203,7 +203,9 @@ function orderCartOnWhatsApp() {
   });
 
   message += `Total: ₹${total}%0A%0A`;
-  message += `Location: Keshavapatnam, Karimnagar`;
+  message += `Customer Name:%0A`;
+  message += `Delivery Address:%0A`;
+  message += `Phone Number:%0A`;
 
   window.open(`https://wa.me/918019603343?text=${message}`, "_blank");
 }
