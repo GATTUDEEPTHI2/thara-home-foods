@@ -134,6 +134,7 @@ function increaseCartQty(index) {
 
 function decreaseCartQty(index) {
   if (cart[index].qty > 1) {
+
     cart[index].qty -= 1;
   } else {
     cart.splice(index, 1);
@@ -232,9 +233,9 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
       loader.style.display = "none";
-    }, 500);
+    }, 300);
 
-  }, 1200);
+  }, 500);
 
 });
 
