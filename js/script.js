@@ -235,7 +235,7 @@ window.addEventListener("load", () => {
       loader.style.display = "none";
     }, 300);
 
-  }, 500);
+  }, 300);
 
 });
 
@@ -253,4 +253,12 @@ window.addEventListener("scroll", () => {
 
   });
 
+});
+
+window.addEventListener("load", () => {
+  document.querySelectorAll(".fade-up").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      el.classList.add("show");
+    }
+  });
 });
