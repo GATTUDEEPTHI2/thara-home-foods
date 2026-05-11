@@ -995,3 +995,12 @@ footer {
     max-width:320px;
   }
 }
+
+.store-info{
+  margin-bottom: 30px;
+}
+
+.about .store-info{
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
