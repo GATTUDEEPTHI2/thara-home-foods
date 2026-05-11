@@ -881,3 +881,56 @@ footer {
   text-align:center;
   letter-spacing:1px;
 }
+
+@media(max-width:768px){
+
+  .header{
+    padding:10px 5%;
+  }
+
+  .brand{
+    gap:8px;
+  }
+
+  .brand img{
+    width:52px;
+  }
+
+  .brand-text h2{
+    font-size:22px;
+    line-height:1.05;
+  }
+
+  .brand-text p{
+    font-size:12px;
+    letter-spacing:1px;
+  }
+
+  .hero{
+    padding:45px 6% 35px;
+    min-height:auto;
+  }
+
+  .hero-text h1{
+    font-size:32px;
+    line-height:1.18;
+    margin-bottom:22px;
+  }
+
+  .hero-text p{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:25px;
+  }
+
+  .hero-note{
+    max-width:280px;
+    margin:22px auto 0;
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .menu-btn{
+    font-size:32px;
+  }
+}
