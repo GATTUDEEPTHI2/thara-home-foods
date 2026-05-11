@@ -1004,3 +1004,8 @@ footer {
   margin-top: 25px;
   margin-bottom: 30px;
 }
+
+.hero.fade-up{
+  opacity:1;
+  transform:translateY(0);
+}
