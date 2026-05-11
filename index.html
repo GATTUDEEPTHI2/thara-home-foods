@@ -2,250 +2,480 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Thara Home Foods | Homemade Telangana Pickles, Snacks & Sweets</title>
 
-  <meta name="description"
-    content="Order authentic homemade Telangana pickles, snacks, appalu and sweets from Thara Home Foods.">
-
-  <meta name="keywords"
-    content="Telangana pickles, homemade pickles, snacks, sweets, appalu, Thara Home Foods">
+  <meta name="description" content="Order authentic homemade Telangana pickles, snacks, appalu and sweets from Thara Home Foods. Freshly prepared with traditional recipes and homemade care.">
+  <meta name="keywords" content="Telangana pickles, homemade pickles, snacks, sweets, appalu, Thara Home Foods, chicken pickle, mango pickle">
+  <meta name="author" content="Thara Home Foods">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#687c18">
 
   <link rel="icon" type="image/png" href="assets/logo.png">
 
-  <!-- SEO -->
   <meta property="og:title" content="Thara Home Foods">
-
-  <meta property="og:description"
-    content="Authentic homemade Telangana pickles, snacks, appalu & sweets.">
-
-  <meta property="og:image"
-    content="https://thara-home-foods.vercel.app/assets/preview.png">
-
+  <meta property="og:description" content="Authentic homemade Telangana pickles, snacks, appalu & sweets. Freshly prepared with traditional recipes and homemade care.">
+  <meta property="og:image" content="https://thara-home-foods.vercel.app/assets/preview.png">
   <meta property="og:type" content="website">
-
-  <meta property="og:url"
-    content="https://thara-home-foods.vercel.app/">
+  <meta property="og:url" content="https://thara-home-foods.vercel.app/">
 
   <meta name="twitter:card" content="summary_large_image">
-
-  <meta name="twitter:image"
-    content="https://thara-home-foods.vercel.app/assets/preview.png">
+  <meta name="twitter:image" content="https://thara-home-foods.vercel.app/assets/preview.png">
 
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Thara Home Foods",
+    "image": "https://thara-home-foods.vercel.app/assets/logo.png",
+    "url": "https://thara-home-foods.vercel.app",
+    "telephone": "+91 8019603343",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Keshavapatnam",
+      "addressRegion": "Karimnagar",
+      "addressCountry": "India"
+    },
+    "servesCuisine": "Telangana Homemade Foods",
+    "priceRange": "₹₹"
+  }
+  </script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-content">
+      <img src="assets/logo.png" alt="Thara Home Foods">
+      <h2>Thara Home Foods</h2>
+    </div>
+  </div>
 
+  <!-- HEADER -->
   <header class="header">
 
     <div class="brand">
-
       <img src="assets/logo.png" alt="Thara Home Foods Logo">
 
       <div class="brand-text">
         <h2>Thara Home Foods</h2>
         <p>Amma Chethi Vanta</p>
       </div>
-
     </div>
 
-    <nav>
+    <button class="menu-btn" onclick="openMenu()">☰</button>
 
-      <a href="#home">Home</a>
+    <nav id="mobileMenu">
+      <button class="close-btn" onclick="closeMenu()">×</button>
 
-      <a href="#categories">Categories</a>
-
-      <a href="#products">Products</a>
-
-      <a href="#about">About</a>
-
-      <a href="#contact">Contact</a>
-
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#categories" onclick="closeMenu()">Categories</a>
+      <a href="#products" onclick="closeMenu()">Products</a>
+      <a href="#cart" onclick="closeMenu()">Cart</a>
+      <a href="#why-us" onclick="closeMenu()">Why Choose Us</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
     </nav>
 
   </header>
 
   <!-- HERO -->
-
-  <section class="hero" id="home">
+  <section class="hero fade-up" id="home">
 
     <div class="hero-text">
-
-      <h1>
-        Homemade Telangana Pickles,
-        Appalu & Sweets
-      </h1>
+      <h1>Homemade Telangana Pickles, Appalu & Sweets</h1>
 
       <p>
-        Traditional Telangana homemade foods prepared
-        with pure ingredients, authentic recipes and
-        homemade care.
+        Traditional Telangana homemade foods prepared with pure ingredients,
+        authentic recipes and homemade care. Available for home delivery and bulk event orders.
       </p>
 
-      <a href="#products" class="btn">
-        View Menu
-      </a>
+      <a href="#products" class="btn">View Menu</a>
 
+      <p class="hero-note">
+        Freshly prepared • Bulk orders available • Keshavapatnam, Karimnagar
+      </p>
     </div>
 
     <div class="hero-image">
-
       <img src="assets/logo.png" alt="Thara Home Foods">
-
     </div>
 
   </section>
 
   <!-- CATEGORIES -->
-
-  <section class="categories" id="categories">
+  <section class="categories fade-up" id="categories">
 
     <h2>Categories</h2>
 
-    <div class="category-buttons">
-
-      <a href="#veg">🥭 Veg Pickles</a>
-
-      <a href="#nonveg">🍗 Non-Veg Pickles</a>
-
-      <a href="#appalu">🫓 Appalu</a>
-
-      <a href="#snacks">🥨 Snacks</a>
-
-      <a href="#sweets">🍬 Sweets</a>
-
+    <div class="category-wrapper">
+      <button class="category-card active" onclick="filterProducts('all', this)">🍽️ All</button>
+      <button class="category-card" onclick="filterProducts('veg', this)">🥭 Veg Pickles</button>
+      <button class="category-card" onclick="filterProducts('nonveg', this)">🍗 Non-Veg Pickles</button>
+      <button class="category-card" onclick="filterProducts('appalu', this)">🫓 Appalu</button>
+      <button class="category-card" onclick="filterProducts('sweets', this)">🍬 Sweets</button>
     </div>
 
   </section>
 
   <!-- PRODUCTS -->
+  <section class="products fade-up" id="products">
 
-  <section class="products" id="products">
+    <h2>Our Products</h2>
 
-    <!-- VEG -->
+    <!-- VEG PICKLES -->
+    <div class="product-category veg">
 
-    <div id="veg">
-
-      <h2>Veg Pickles</h2>
+      <h3 class="category-title">🥭 Veg Pickles</h3>
 
       <div class="product-grid">
 
         <div class="product-card">
-          <img src="assets/mango-pickle.jpg" alt="">
+          <img src="assets/mango-pickle.jpg" alt="Mango Pickle">
           <h3>Mango Pickle</h3>
-          <p>Traditional spicy mango pickle.</p>
+          <p>Traditional spicy Telangana mango pickle.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹100</option>
+              <option>500g - ₹200</option>
+              <option>1kg - ₹400</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
         <div class="product-card">
-          <img src="assets/lemon-pickle.jpg" alt="">
+          <img src="assets/lemon-pickle.jpg" alt="Lemon Pickle">
           <h3>Lemon Pickle</h3>
           <p>Authentic homemade lemon pickle.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹100</option>
+              <option>500g - ₹200</option>
+              <option>1kg - ₹400</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
         <div class="product-card">
-          <img src="assets/tomato-pickle.jpg" alt="">
+          <img src="assets/tomato-pickle.jpg" alt="Tomato Pickle">
           <h3>Tomato Pickle</h3>
-          <p>Fresh homemade tomato pickle.</p>
+          <p>Rich oily tomato pachadi.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹100</option>
+              <option>500g - ₹200</option>
+              <option>1kg - ₹400</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/gongura-pickle.jpg" alt="Gongura Pickle">
+          <h3>Gongura Pickle</h3>
+          <p>Traditional Telangana gongura pachadi.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹100</option>
+              <option>500g - ₹200</option>
+              <option>1kg - ₹400</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/chinthakaya-pickle.jpg" alt="Chinthakaya Pickle">
+          <h3>Chinthakaya Pickle</h3>
+          <p>Authentic tamarind pickle.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹100</option>
+              <option>500g - ₹200</option>
+              <option>1kg - ₹400</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/usirikaya-pickle.jpg" alt="Usirikaya Pickle">
+          <h3>Usirikaya Pickle</h3>
+          <p>Spicy homemade amla pickle.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹125</option>
+              <option>500g - ₹250</option>
+              <option>1kg - ₹500</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
       </div>
-
     </div>
 
-    <!-- NON VEG -->
+    <!-- NON VEG PICKLES -->
+    <div class="product-category nonveg">
 
-    <div id="nonveg">
-
-      <h2>Non-Veg Pickles</h2>
+      <h3 class="category-title">🍗 Non-Veg Pickles</h3>
 
       <div class="product-grid">
 
         <div class="product-card">
-          <img src="assets/chicken-pickle.jpg" alt="">
+          <img src="assets/chicken-pickle.jpg" alt="Chicken Pickle">
           <h3>Chicken Pickle</h3>
-          <p>Spicy homemade chicken pickle.</p>
+          <p>Hot & spicy Telangana chicken pickle.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹250</option>
+              <option>500g - ₹500</option>
+              <option>1kg - ₹1000</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
         <div class="product-card">
-          <img src="assets/mutton-pickle.jpg" alt="">
+          <img src="assets/mutton-pickle.jpg" alt="Mutton Pickle">
           <h3>Mutton Pickle</h3>
-          <p>Traditional mutton pickle.</p>
+          <p>Rich mutton pickle with authentic masala.</p>
+
+          <div class="order-box">
+            <select>
+              <option>250g - ₹625</option>
+              <option>500g - ₹1250</option>
+              <option>1kg - ₹2500</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
       </div>
-
     </div>
 
     <!-- APPALU -->
+    <div class="product-category appalu">
 
-    <div id="appalu">
-
-      <h2>Appalu</h2>
+      <h3 class="category-title">🫓 Appalu</h3>
 
       <div class="product-grid">
 
         <div class="product-card">
-          <img src="assets/chekkalu.jpg" alt="">
+          <img src="assets/chekkalu.jpg" alt="Chekkalu">
           <h3>Chekkalu</h3>
-          <p>Crispy homemade chekkalu.</p>
+          <p>Crispy homemade Telangana chekkalu.</p>
+
+          <div class="order-box">
+            <select>
+              <option>500g - ₹175</option>
+              <option>1kg - ₹350</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
         <div class="product-card">
-          <img src="assets/sakinalu.jpg" alt="">
+          <img src="assets/sakinalu.jpg" alt="Sakinalu">
           <h3>Sakinalu</h3>
           <p>Traditional Telangana sakinalu.</p>
+
+          <div class="order-box">
+            <select>
+              <option>500g - ₹175</option>
+              <option>1kg - ₹350</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
-
-      </div>
-
-    </div>
-
-    <!-- SNACKS -->
-
-    <div id="snacks">
-
-      <h2>Snacks</h2>
-
-      <div class="product-grid">
 
         <div class="product-card">
-          <img src="assets/murukulu.jpg" alt="">
+          <img src="assets/murukulu.jpg" alt="Murukulu">
           <h3>Murukulu</h3>
-          <p>Crispy homemade murukulu.</p>
+          <p>Crunchy homemade murukulu.</p>
+
+          <div class="order-box">
+            <select>
+              <option>500g - ₹175</option>
+              <option>1kg - ₹350</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
       </div>
-
     </div>
 
     <!-- SWEETS -->
+    <div class="product-category sweets">
 
-    <div id="sweets">
-
-      <h2>Sweets</h2>
+      <h3 class="category-title">🍬 Sweets</h3>
 
       <div class="product-grid">
 
         <div class="product-card">
-          <img src="assets/areselu.jpg" alt="">
+          <img src="assets/areselu.jpg" alt="Areselu">
           <h3>Areselu</h3>
           <p>Traditional jaggery sweet.</p>
+
+          <div class="order-box">
+            <select>
+              <option>500g - ₹225</option>
+              <option>1kg - ₹450</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
         <div class="product-card">
-          <img src="assets/burelu.jpg" alt="">
+          <img src="assets/burelu.jpg" alt="Burelu">
           <h3>Burelu</h3>
-          <p>Delicious homemade burelu.</p>
+          <p>Delicious homemade poornam burelu.</p>
+
+          <div class="order-box">
+            <select>
+              <option>500g - ₹225</option>
+              <option>1kg - ₹450</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
+        <div class="product-card">
+          <img src="assets/laddu.jpg" alt="Laddu">
+          <h3>Boondi Laddu</h3>
+          <p>Fresh homemade laddulu.</p>
+
+          <div class="order-box">
+            <select>
+              <option>500g - ₹225</option>
+              <option>1kg - ₹450</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/kaja.jpg" alt="Kaja">
+          <h3>Madatha Kaja</h3>
+          <p>Juicy layered Telangana kaja sweet.</p>
+
+          <div class="order-box">
+            <select>
+              <option>500g - ₹225</option>
+              <option>1kg - ₹450</option>
+            </select>
+
+            <div class="cart-controls">
+              <button class="cart-btn" onclick="addToCart(this)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CART -->
+  <section class="cart-section fade-up" id="cart">
+
+    <h2>Your Cart</h2>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-summary">
+      <h3 id="cartTotal">Total: ₹0</h3>
+      <p>🚚 Delivery available</p>
+
+      <button onclick="orderCartOnWhatsApp()" class="cart-order-btn">
+        Order Entire Cart on WhatsApp
+      </button>
+    </div>
+
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us fade-up" id="why-us">
+
+    <h2>Why Choose Us</h2>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        🏡
+        <h3>Authentic Homemade Taste</h3>
+        <p>Traditional Telangana recipes prepared with homemade care and authentic flavors.</p>
+      </div>
+
+      <div class="why-card">
+        🌿
+        <h3>Fresh & Hygienic Preparation</h3>
+        <p>Made using fresh ingredients, quality spices and hygienic preparation methods.</p>
+      </div>
+
+      <div class="why-card">
+        🎉
+        <h3>Bulk & Event Orders</h3>
+        <p>Available for functions, festivals, parties, weddings and special occasions.</p>
       </div>
 
     </div>
@@ -253,88 +483,92 @@
   </section>
 
   <!-- ABOUT -->
-
-  <section class="about" id="about">
+  <section class="about fade-up" id="about">
 
     <h2>About Us</h2>
 
     <p>
-      Thara Home Foods brings authentic homemade Telangana
-      flavors directly to your home with traditional recipes
+      Thara Home Foods brings authentic homemade Telangana flavors directly to your home.
+      Every item is prepared hygienically using traditional recipes, quality ingredients
       and homemade care.
+    </p>
+
+    <p class="store-info">
+      📍 Offline Store Location<br>
+      Keshavapatnam, Karimnagar
+    </p>
+
+    <p class="store-info">
+      🎉 Bulk Orders Available For<br>
+      Functions • Festivals • Parties • Weddings • Special Events
     </p>
 
   </section>
 
   <!-- CONTACT -->
-
-  <section class="contact" id="contact">
+  <section class="contact fade-up" id="contact">
 
     <h2>Contact & Order</h2>
 
     <p>
-      For orders, bulk orders and event bookings,
-      contact Thara Home Foods.
+      For orders, bulk orders, and event bookings, contact Thara Home Foods.
     </p>
 
     <div class="contact-details">
-
       <p>📍 Keshavapatnam, Karimnagar</p>
-
       <p>📞 8019603343 / 9603343019</p>
 
       <p>
         📸 Instagram:
-        <a href="https://www.instagram.com/tharahomefood"
-          target="_blank">
-
+        <a href="https://www.instagram.com/tharahomefood" target="_blank" class="insta-link">
           @tharahomefood
-
         </a>
       </p>
-
     </div>
 
     <div class="contact-buttons">
 
-      <a href="https://wa.me/918019603343"
-        class="btn"
-        target="_blank">
-
+      <a href="https://wa.me/918019603343" class="btn" target="_blank">
         Order on WhatsApp
-
       </a>
 
-      <a href="https://www.instagram.com/tharahomefood"
-        class="btn"
-        target="_blank">
-
+      <a href="https://www.instagram.com/tharahomefood" class="btn insta-btn" target="_blank">
         Follow on Instagram
-
       </a>
 
       <a href="https://www.google.com/maps/search/?api=1&query=78V3%2BM85+HANUMAN+COOLING+WATER+PLANT,+Kesavapatnam,+Telangana+505490"
-        class="btn"
-        target="_blank">
-
+         class="btn location-btn"
+         target="_blank">
         📍 Visit Store Location
-
       </a>
 
     </div>
 
   </section>
 
+  <!-- STICKY ICONS -->
+  <div class="sticky-icons">
+
+    <a href="#cart" class="cart-sticky">
+      🛒
+      <span id="cartCount"></span>
+    </a>
+
+    <a href="https://wa.me/918019603343" target="_blank" class="whatsapp-sticky">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
   <!-- FOOTER -->
-
   <footer>
-
-    <p>
-      © 2026 Thara Home Foods.
-      All Rights Reserved.
-    </p>
-
+    <p>© 2026 Thara Home Foods. All Rights Reserved.</p>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 
