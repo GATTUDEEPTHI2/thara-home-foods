@@ -950,3 +950,48 @@ footer {
 .location-btn:hover{
   background:#5a2d12;
 }
+
+.about,
+.contact{
+  background:#fffaf3;
+}
+
+.about p,
+.contact p{
+  max-width:760px;
+}
+
+.store-info,
+.contact-details{
+  max-width:720px;
+  margin:25px auto 0;
+  background:white;
+  padding:24px 28px;
+  border-radius:22px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+
+.contact-details p{
+  margin-bottom:16px;
+}
+
+.contact-buttons{
+  max-width:460px;
+  margin:35px auto 0;
+}
+
+.contact-buttons .btn{
+  width:100%;
+  text-align:center;
+}
+
+@media(max-width:768px){
+  .store-info,
+  .contact-details{
+    padding:22px 18px;
+  }
+
+  .contact-buttons{
+    max-width:320px;
+  }
+}
