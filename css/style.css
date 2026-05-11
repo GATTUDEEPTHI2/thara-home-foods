@@ -934,3 +934,19 @@ footer {
     font-size:32px;
   }
 }
+
+.location-btn{
+  display:inline-block;
+  margin-top:22px;
+  background:#687c18;
+  color:white;
+  padding:14px 28px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.location-btn:hover{
+  background:#5a2d12;
+}
